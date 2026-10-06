@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Sandro Sarlis López</title>
+<meta name="description" content="Consultor en Automatización con IA y Desarrollador .NET/C# con más de 20 años de experiencia. Especialista en n8n, Claude AI, OpenAI, WhatsApp Business API. Cuernavaca, México.">
+
+<!-- Indexación -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="Sandro Sarlis López">
+<meta name="keywords" content="consultor IA, automatización, n8n, .NET, C#, inteligencia artificial, Cuernavaca, México, chatbot, WhatsApp Business, CAIO">
+
+<!-- Open Graph (LinkedIn, WhatsApp, redes sociales) -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Sandro Sarlis López — Consultor IA · Dev .NET/C#">
+<meta property="og:description" content="Automatización con IA para negocios que ya tienen sistemas funcionando y buscan evolucionar sin partir de cero.">
+<meta property="og:url" content="https://sasalgh.github.io">
+<meta property="og:locale" content="es_MX">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sandro Sarlis López — Consultor IA · Dev .NET/C#">
+<meta name="twitter:description" content="Automatización con IA para negocios que buscan evolucionar sin partir de cero.">
+
+<!-- Schema.org para buscadores y LLMs -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sandro Sarlis López",
+  "jobTitle": "Consultor en Automatización con IA y Desarrollador .NET/C#",
+  "description": "Desarrollador de software con más de 20 años de experiencia en sistemas empresariales .NET/C#. Hoy aplica IA y automatización con n8n, Claude, OpenAI y WhatsApp Business API para resolver problemas reales en organizaciones.",
+  "url": "https://sasalgh.github.io",
+  "email": "sandrosarlis@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cuernavaca",
+    "addressRegion": "Morelos",
+    "addressCountry": "MX"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/sandro-guavavoice",
+    "https://somosclet.org"
+  ],
+  "knowsAbout": ["n8n", "Claude AI", "OpenAI", "Gemini", "WhatsApp Business API", ".NET", "C#", "SQL Server", "automatización de procesos", "inteligencia artificial"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:        #0d1b2a;
+    --navy-mid:    #1a2744;
+    --cyan:        #00d4ff;
+    --cyan-dim:    rgba(0,212,255,0.10);
+    --cyan-border: rgba(0,212,255,0.16);
+    --w100:        #ffffff;
+    --w70:         rgba(255,255,255,0.70);
+    --w50:         rgba(255,255,255,0.50);
+    --w30:         rgba(255,255,255,0.30);
+    --w08:         rgba(255,255,255,0.08);
+    --w05:         rgba(255,255,255,0.05);
+  }
+
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--navy);
+    color: var(--w100);
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100dvh;
+    padding: 0 1.25rem;
+    padding-top: max(2.5rem, env(safe-area-inset-top));
+    padding-bottom: max(3rem, env(safe-area-inset-bottom));
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Glow de fondo */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -20%; right: -15%;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,80,200,0.06) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: -15%; left: -10%;
+    width: 380px; height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,212,255,0.04) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  /* Línea cyan superior */
+  .topline {
+    position: fixed;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--cyan) 40%, transparent 100%);
+    z-index: 100;
+  }
+
+  .page {
+    max-width: 420px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── HERO ─────────────────────────────── */
+  .hero { padding-bottom: 2rem; }
+
+  .avatar {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    border: 1.5px solid var(--cyan-border);
+    background: var(--w08);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px;
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+  }
+  .avatar img {
+    width: 100%; height: 100%;
+    object-fit: cover; border-radius: 50%;
+    display: none;
+  }
+
+  .name {
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    margin-bottom: .35rem;
+  }
+
+  .role {
+    font-size: .72rem;
+    font-weight: 400;
+    color: var(--cyan);
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    margin-bottom: .9rem;
+  }
+
+  /* ── BIO ──────────────────────────────── */
+  .bio {
+    font-size: .875rem;
+    line-height: 1.7;
+    color: var(--w70);
+    margin-bottom: .75rem;
+  }
+
+  .bio strong { color: var(--w100); font-weight: 500; }
+
+  .bio-detail {
+    font-size: .8rem;
+    line-height: 1.65;
+    color: var(--w50);
+    margin-bottom: 0.3rem;
+  }
+
+  /* ── DIVISOR ──────────────────────────── */
+  .divider {
+    height: 1px;
+    background: var(--cyan-border);
+    margin: 1.75rem 0;
+  }
+
+  /* ── SECCIÓN TÍTULO ───────────────────── */
+  .section-label {
+    font-size: .68rem;
+    font-weight: 500;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--w30);
+    margin-bottom: 1rem;
+  }
+
+  /* ── CASOS DE USO ─────────────────────── */
+  .cases {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    margin-bottom: 0;
+  }
+
+  .case-item {
+    background: var(--w05);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 9px;
+    padding: .85rem 1rem;
+    display: flex;
+    gap: .85rem;
+    align-items: flex-start;
+  }
+
+  .case-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: .05rem;
+  }
+
+  .case-title {
+    font-size: .825rem;
+    font-weight: 500;
+    color: var(--w100);
+    margin-bottom: .2rem;
+  }
+
+  .case-desc {
+    font-size: .775rem;
+    color: var(--w50);
+    line-height: 1.55;
+  }
+
+  /* ── CREDENCIALES ─────────────────────── */
+  .creds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+  }
+
+  .cred {
+    font-size: .68rem;
+    letter-spacing: .05em;
+    color: var(--cyan);
+    border: 1px solid var(--cyan-border);
+    background: var(--cyan-dim);
+    border-radius: 20px;
+    padding: 3px 11px;
+  }
+
+  /* ── BOTONES DE CONTACTO ──────────────── */
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: .65rem;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    padding: .85rem 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    background: var(--w08);
+    border: 1px solid rgba(255,255,255,0.07);
+    color: var(--w70);
+    font-size: .875rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background .16s, border-color .16s, color .16s;
+    width: 100%;
+    text-align: left;
+  }
+
+  .btn:hover, .btn:focus-visible {
+    background: var(--cyan-dim);
+    border-color: var(--cyan-border);
+    color: var(--w100);
+    outline: none;
+  }
+
+  .btn-icon {
+    width: 30px; height: 30px;
+    border-radius: 7px;
+    background: rgba(255,255,255,0.06);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--w70);
+  }
+
+  .btn-label {
+    display: block;
+    font-size: .7rem;
+    color: var(--w30);
+    margin-bottom: 1px;
+  }
+
+  .btn-value {
+    display: block;
+    font-size: .85rem;
+  }
+
+  .btn-arrow {
+    margin-left: auto;
+    color: var(--w30);
+    font-size: 11px;
+    transition: transform .16s;
+    flex-shrink: 0;
+  }
+
+  .btn:hover .btn-arrow { transform: translateX(3px); }
+
+  /* ── FOOTER ───────────────────────────── */
+  .footer {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    font-size: .72rem;
+    color: var(--w30);
+    text-align: center;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<div class="topline"></div>
+
+<div class="page">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="avatar" id="avatar">
+      <img id="avatar-img" src="" alt="Sandro Sarlis López">
+      <span id="avatar-icon">👤</span>
+    </div>
+
+    <div class="name">Sandro Sarlis López</div>
+    <div class="role">Consultor IA · Dev .NET / C#</div>
+
+    <p class="bio">
+      Con <strong>más de 20 años</strong> construyendo sistemas empresariales en .NET y C#. 
+      Estos años me han dado algo que valoro en cada proyecto: Entender el proceso de negocio antes de proponer cualquier automatización.
+    </p>
+    <p class="bio-detail">
+      Hoy combino esa base con herramientas de IA — n8n, Claude, OpenAI, Gemini, 
+      WhatsApp Business API — para resolver problemas reales en organizaciones que 
+	  ya tienen sistemas funcionando y buscan evolucionar sin partir de cero.<br><br>
+      Esa visión la complemento hoy desde el <strong>CLET — Consejo Latinoamericano de Ética en Tecnología —</strong>, 
+      con certificación CAIO-CP.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+  <!-- EN QUÉ PUEDO AYUDARTE -->
+  <section>
+    <p class="section-label">En qué puedo ayudarte</p>
+    <div class="cases">
+      <div class="case-item">
+        <span class="case-icon">🤖</span>
+        <div>
+          <div class="case-title">Automatización de procesos con IA</div>
+          <div class="case-desc">Flujos que eliminan captura manual, procesan documentos y conectan sistemas que hoy no se hablan — sin reemplazar lo que ya funciona.</div>
+        </div>
+      </div>
+      <div class="case-item">
+        <span class="case-icon">💬</span>
+        <div>
+          <div class="case-title">Chatbots y agentes de voz</div>
+          <div class="case-desc">Recepción médica, agendamiento, atención fuera de horario. MVPs funcionales en WhatsApp y canales de voz con n8n y Retell AI.</div>
+        </div>
+      </div>
+      <div class="case-item">
+        <span class="case-icon">⚙️</span>
+        <div>
+          <div class="case-title">Desarrollo .NET / C# e integración</div>
+          <div class="case-desc">Sistemas empresariales, módulos legacy, integraciones con APIs. Cada caso se analiza antes de proponer cualquier solución.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CREDENCIALES -->
+  <section style="margin-bottom:1.75rem;">
+    <p class="section-label">Formación y membresías</p>
+    <div class="creds">
+      <span class="cred">CAIO-CP</span>
+      <span class="cred">CLET</span>
+      <span class="cred">20+ años .NET/C#</span>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section>
+    <p class="section-label">Contacto</p>
+    <div class="links">
+
+      <a class="btn" href="mailto:sandrosarlis@gmail.com">
+        <span class="btn-icon">✉</span>
+        <span>
+          <span class="btn-label">Email</span>
+          <span class="btn-value">Cuéntame tu proyecto</span>
+        </span>
+        <span class="btn-arrow">→</span>
+      </a>
+
+      <a class="btn" href="https://www.linkedin.com/in/sandro-guavavoice" target="_blank" rel="noopener">
+        <span class="btn-icon">in</span>
+        <span>
+          <span class="btn-label">LinkedIn</span>
+          <span class="btn-value">Ver perfil y conectar</span>
+        </span>
+        <span class="btn-arrow">→</span>
+      </a>
+
+      <a class="btn" href="https://somosclet.org/" target="_blank" rel="noopener">
+        <span class="btn-icon">🔬</span>
+        <span>
+          <span class="btn-label">Organización Latinoamericana"</span>
+          <span class="btn-value">somosclet.org</span>
+        </span>
+        <span class="btn-arrow">→</span>
+      </a>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    Disponible para proyectos presenciales y remotos
+  </footer>
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+# Sandro Sarlis López
+
+## Quién soy
+
+Desarrollador de software con más de 20 años de experiencia en sistemas empresariales (.NET, C#, SQL Server, Oracle). Consultor independiente en automatización con IA. Disponible para trabajo remoto y presencial.
+
+## Qué hago hoy
+
+Combino experiencia en desarrollo empresarial con herramientas de IA modernas para automatizar procesos en organizaciones que ya tienen sistemas funcionando. No propongo reemplazar lo que funciona — propongo hacer que trabaje mejor.
+
+Herramientas principales: n8n, Claude AI, OpenAI, Gemini, WhatsApp Business API (Meta), Google Sheets API, Python, Oracle Cloud.
+
+## Proyectos demostrables (MVPs)
+
+- Extracción automatizada de facturas PDF → Google Sheets (n8n + Gemini)
+- Dashboard de indicadores en tiempo real con Chart.js y Google Sheets
+- Agente de voz IA para recepción médica (n8n + Retell AI + Twilio)
+- Chatbot de recepción médica vía WhatsApp Business API (n8n)
+
+## Experiencia previa relevante
+
+- 19 años como Investigador–Desarrollador en INEEL (Instituto Nacional de Electricidad y Energías Limpias), a cargo del ciclo completo de sistemas institucionales críticos.
+- Jefe del Departamento de Desarrollo de Sistemas en DIF Morelos (2002–2005).
+- Participación técnica en SIFEM (ahora SNIAS), ganador del Premio Nacional de Administración Pública Federal 2004.
+- Registro de Derecho de Autor: 03-2017-070511124100-01 (Sistema de Certámenes de Investigación, INEEL).
+
+## Formación reciente
+
+- CAIO-CP — Chief AI Officer Certified Professional, Silicon Valley Certification Hub (2025)
+- Master en Data Science con IA — INFOTEC · DEVF · Meta IA (curso, 2026)
+- Ciencia de Datos con Inteligencia Artificial — INFOTEC · DEVF · Meta IA (curso, 2026)
+- Propedéutico Análisis de Datos (PADAT-CPF) — Tecnológico Nacional de México (2026)
+
+## Membresías
+
+- CLET — Consejo Latinoamericano de Ética en Tecnología (somosclet.org)
+  Miembro de la Comisión de Vinculación con Empresas.
+
+## Contacto
+
+- Web: https://sasalgh.github.io
+- LinkedIn: https://www.linkedin.com/in/sandro-guavavoice
