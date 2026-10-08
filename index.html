@@ -12,7 +12,7 @@
 <meta name="author" content="Sandro Sarlis López">
 <meta name="keywords" content="consultor IA, automatización, n8n, .NET, C#, inteligencia artificial, Cuernavaca, México, chatbot, WhatsApp Business, CAIO">
 
-<!-- Open Graph (LinkedIn, WhatsApp, redes sociales) -->
+<!-- Open Graph -->
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Sandro Sarlis López — Consultor IA · Dev .NET/C#">
 <meta property="og:description" content="Automatización con IA para negocios que ya tienen sistemas funcionando y buscan evolucionar sin partir de cero.">
@@ -24,7 +24,7 @@
 <meta name="twitter:title" content="Sandro Sarlis López — Consultor IA · Dev .NET/C#">
 <meta name="twitter:description" content="Automatización con IA para negocios que buscan evolucionar sin partir de cero.">
 
-<!-- Schema.org para buscadores y LLMs -->
+<!-- Schema.org -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -85,7 +85,6 @@
     overflow-x: hidden;
   }
 
-  /* Glow de fondo */
   body::before {
     content: '';
     position: fixed;
@@ -105,7 +104,6 @@
     pointer-events: none;
   }
 
-  /* Línea cyan superior */
   .topline {
     position: fixed;
     top: 0; left: 0; right: 0; height: 2px;
@@ -120,7 +118,6 @@
     z-index: 1;
   }
 
-  /* ── HERO ─────────────────────────────── */
   .hero { padding-bottom: 2rem; }
 
   .avatar {
@@ -156,7 +153,6 @@
     margin-bottom: .9rem;
   }
 
-  /* ── BIO ──────────────────────────────── */
   .bio {
     font-size: .875rem;
     line-height: 1.7;
@@ -173,14 +169,12 @@
     margin-bottom: 0.3rem;
   }
 
-  /* ── DIVISOR ──────────────────────────── */
   .divider {
     height: 1px;
     background: var(--cyan-border);
     margin: 1.75rem 0;
   }
 
-  /* ── SECCIÓN TÍTULO ───────────────────── */
   .section-label {
     font-size: .68rem;
     font-weight: 500;
@@ -190,7 +184,6 @@
     margin-bottom: 1rem;
   }
 
-  /* ── CASOS DE USO ─────────────────────── */
   .cases {
     display: flex;
     flex-direction: column;
@@ -227,11 +220,12 @@
     line-height: 1.55;
   }
 
-  /* ── CREDENCIALES ─────────────────────── */
+  /* ── TAGS DE CREDENCIALES ─────────────── */
   .creds {
     display: flex;
     flex-wrap: wrap;
     gap: .45rem;
+    margin-bottom: 1.25rem;
   }
 
   .cred {
@@ -242,6 +236,107 @@
     background: var(--cyan-dim);
     border-radius: 20px;
     padding: 3px 11px;
+  }
+
+  /* ── BADGE ────────────────────────────── */
+  .badge-wrap {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .badge-img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .badge-text {
+    font-size: .75rem;
+    color: var(--w50);
+    line-height: 1.5;
+  }
+
+  .badge-text strong {
+    display: block;
+    font-size: .8rem;
+    color: var(--w70);
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  /* ── DOCUMENTOS (cert + diploma) ─────── */
+  .docs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .75rem;
+  }
+
+  .doc-item {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .doc-label {
+    font-size: .65rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--w30);
+  }
+
+  .doc-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.08);
+    cursor: pointer;
+    transition: border-color .16s, transform .16s;
+  }
+
+  .doc-img:hover {
+    border-color: var(--cyan-border);
+    transform: scale(1.02);
+  }
+
+  /* ── LIGHTBOX ─────────────────────────── */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .lightbox.open {
+    display: flex;
+  }
+
+  .lightbox img {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 10px;
+    object-fit: contain;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 1.25rem; right: 1.25rem;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: #fff;
+    font-size: 1.25rem;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
   }
 
   /* ── BOTONES DE CONTACTO ──────────────── */
@@ -310,7 +405,6 @@
 
   .btn:hover .btn-arrow { transform: translateX(3px); }
 
-  /* ── FOOTER ───────────────────────────── */
   .footer {
     margin-top: 2.5rem;
     padding-top: 1.5rem;
@@ -326,6 +420,12 @@
 
 <div class="topline"></div>
 
+<!-- LIGHTBOX para ver documentos en grande -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
 <div class="page">
 
   <!-- HERO -->
@@ -336,22 +436,23 @@
     </div>
 
     <div class="name">Sandro Sarlis López</div>
-    <div class="role">Consultor IA · Dev .NET / C#</div>
+    <div class="role">Consultor IA & CAIO-CP · Dev .NET / C# / SQL</div>
 
     <p class="bio">
-      Con <strong>más de 20 años</strong> construyendo sistemas empresariales en .NET y C#. 
-      Estos años me han dado algo que valoro en cada proyecto: Entender el proceso de negocio antes de proponer cualquier automatización.
+      Con dos décadas construyendo sistemas empresariales en .NET y C#.
+      Es necesario entender el proceso de negocio antes de proponer cualquier automatización.
     </p>
     <p class="bio-detail">
-      Hoy combino esa base con herramientas de IA — n8n, Claude, OpenAI, Gemini, 
-      WhatsApp Business API — para resolver problemas reales en organizaciones que 
-	  ya tienen sistemas funcionando y buscan evolucionar sin partir de cero.<br><br>
-      Esa visión la complemento hoy desde el <strong>CLET — Consejo Latinoamericano de Ética en Tecnología —</strong>, 
+      Hoy combino esa base con herramientas de IA — n8n, Claude, OpenAI, Gemini,
+      WhatsApp Business API — para resolver problemas reales en organizaciones que
+      ya tienen sistemas funcionando y buscan evolucionar sin partir de cero.<br><br>
+      Esa visión la complemento hoy desde el <strong>CLET — Consejo Latinoamericano de Ética en Tecnología —</strong>,
       con certificación CAIO-CP.
     </p>
   </section>
 
   <div class="divider"></div>
+
   <!-- EN QUÉ PUEDO AYUDARTE -->
   <section>
     <p class="section-label">En qué puedo ayudarte</p>
@@ -382,13 +483,52 @@
 
   <div class="divider"></div>
 
-  <!-- CREDENCIALES -->
+  <!-- FORMACIÓN Y MEMBRESÍAS -->
   <section style="margin-bottom:1.75rem;">
     <p class="section-label">Formación y membresías</p>
+
+    <!-- Tags -->
     <div class="creds">
       <span class="cred">CAIO-CP</span>
       <span class="cred">CLET</span>
-      <span class="cred">20+ años .NET/C#</span>
+    </div>
+
+    <!-- Badge miembro activo CLET -->
+    <div class="badge-wrap">
+      <img
+        class="badge-img"
+        src="badge-clet.png"
+        alt="Miembro activo CLET"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='none';"
+      >
+      <div class="badge-text">
+        <strong>Miembro Activo</strong>
+        Consejo Latinoamericano de Ética en Tecnología
+      </div>
+    </div>
+
+    <!-- Certificado CAIO-CP y Diploma CLET -->
+    <div class="docs-grid">
+      <div class="doc-item">
+        <span class="doc-label">Certificación CAIO-CP</span>
+        <img
+          class="doc-img"
+          src="cert-caio.png"
+          alt="Certificado CAIO-CP"
+          onclick="openLightbox(this.src, this.alt)"
+          onerror="this.parentElement.style.display='none';"
+        >
+      </div>
+      <div class="doc-item">
+        <span class="doc-label">Membresía CLET</span>
+        <img
+          class="doc-img"
+          src="diploma-clet.png"
+          alt="Diploma Miembro CLET"
+          onclick="openLightbox(this.src, this.alt)"
+          onerror="this.parentElement.style.display='none';"
+        >
+      </div>
     </div>
   </section>
 
@@ -418,7 +558,7 @@
       <a class="btn" href="https://somosclet.org/" target="_blank" rel="noopener">
         <span class="btn-icon">🔬</span>
         <span>
-          <span class="btn-label">Organización Latinoamericana"</span>
+          <span class="btn-label">Organización Latinoamericana</span>
           <span class="btn-value">somosclet.org</span>
         </span>
         <span class="btn-arrow">→</span>
@@ -434,11 +574,27 @@
 </div>
 
 <script>
-    var img = document.getElementById('avatar-img');
-    img.src = 'foto.png';
-    img.style.display = 'block';
-    document.getElementById('avatar-icon').style.display = 'none';
-  </script>
+  // Foto de perfil
+  var img = document.getElementById('avatar-img');
+  img.src = 'foto.png';
+  img.style.display = 'block';
+  document.getElementById('avatar-icon').style.display = 'none';
+
+  // Lightbox para documentos
+  function openLightbox(src, alt) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-img').alt = alt;
+    document.getElementById('lightbox').classList.add('open');
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
 
 </body>
 </html>
