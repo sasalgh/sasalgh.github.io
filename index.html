@@ -57,10 +57,11 @@
   "knowsAbout": ["n8n", "Claude AI", "OpenAI", "Gemini", "WhatsApp Business API", ".NET", "C#", "SQL Server", "automatización de procesos", "inteligencia artificial"]
 }
 </script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" as="style">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -143,7 +144,7 @@
   .avatar img {
     width: 100%; height: 100%;
     object-fit: cover; border-radius: 50%;
-    display: none;
+    display: block;
   }
 
   .name {
@@ -441,8 +442,8 @@
   <!-- HERO -->
   <section class="hero">
     <div class="avatar" id="avatar">
-      <img id="avatar-img" src="" alt="Sandro Sarlis López">
-      <span id="avatar-icon">👤</span>
+      <img id="avatar-img" src="foto.webp" alt="Sandro Sarlis López">
+      
     </div>
 
     <div class="name">Sandro Sarlis López</div>
@@ -507,8 +508,8 @@
     <div class="badge-wrap">
       <img
         class="badge-img"
-        src="badge-clet.webp"
-        alt="Miembro activo CLET"
+        src="badge-clet.webp" loading="lazy" 
+        alt="Miembro activo CLET" 
         onerror="this.style.display='none';this.nextElementSibling.style.display='none';"
       >
       <div class="badge-text">
@@ -523,8 +524,8 @@
         <span class="doc-label">Certificación CAIO-CP</span>
         <img
           class="doc-img"
-          src="cert-caio.webp"
-          alt="Certificado CAIO-CP"
+          src="cert-caio.webp" loading="lazy" 
+          alt="Certificado CAIO-CP" 
           onclick="openLightbox(this.src, this.alt)"
           onerror="this.parentElement.style.display='none';"
         >
@@ -533,7 +534,7 @@
         <span class="doc-label">Membresía CLET</span>
         <img
           class="doc-img"
-          src="diploma-clet.webp"
+          src="diploma-clet.webp" loading="lazy" 
           alt="Diploma Miembro CLET"
           onclick="openLightbox(this.src, this.alt)"
           onerror="this.parentElement.style.display='none';"
@@ -584,12 +585,6 @@
 </div>
 
 <script>
-  // Foto de perfil
-  var img = document.getElementById('avatar-img');
-  img.src = 'foto.webp';
-  img.style.display = 'block';
-  document.getElementById('avatar-icon').style.display = 'none';
-
   // Lightbox para documentos
   function openLightbox(src, alt) {
     document.getElementById('lightbox-img').src = src;
