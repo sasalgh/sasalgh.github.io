@@ -33,10 +33,10 @@ Herramientas principales: n8n, Claude AI, OpenAI, Gemini, WhatsApp Business API 
 
 ## Membresías
 
-- CLET — Consejo Latinoamericano de Ética en Tecnología (somosclet.org)
+- [CLET — Consejo Latinoamericano de Ética en Tecnología](https://somosclet.org)
   Miembro de la Comisión de Vinculación con Empresas.
 
 ## Contacto
 
-- Web: https://sasalgh.github.io
-- LinkedIn: https://www.linkedin.com/in/sandro-guavavoice
+- [Web](https://sasalgh.github.io)
+- [LinkedIn](https://www.linkedin.com/in/sandro-guavavoice)
