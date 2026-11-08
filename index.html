@@ -618,5 +618,27 @@
   });
 </script>
 
+<!-- Agente de voz ElevenLabs -->
+<elevenlabs-convai agent-id="agent_0701m6sr5rypfq2sjqqs5q90w901"></elevenlabs-convai>
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async 
+type="text/javascript"></script>
+<script>
+// Escuchar las tools del lado del cliente (navegación)
+document.addEventListener('elevenlabs-convai:call', function(event) {
+var detail = event.detail;
+if (detail && detail.tool === 'navegar_a_seccion') {
+var destinos = {
+'servicios': '#servicios',
+'certificaciones': '#certificaciones',
+'contacto': '#contacto'
+};
+var destino = destinos[detail.parameters.seccion];
+if (destino) {
+document.querySelector(destino).scrollIntoView({ behavior: 'smooth' 
+});
+}
+}
+});
+</script>
 </body>
 </html>
